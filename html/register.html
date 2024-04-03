@@ -51,23 +51,27 @@
         <div class="row mb-4">
           <div class="col-12">
             <div class="form-floating my-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name" />
-                <label for="floatingInput">Name</label>
+                <input type="name" class="form-control name" id="name" placeholder="name" />
+                <label for="name">Name</label>
               </div>
             <div class="form-floating my-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-              <label for="floatingInput">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating my-3">
+              <input type="password" class="form-control password" id="password" placeholder="Password" />
+              <label for="password">Password</label>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
-              <label for="floatingPassword">Password</label>
-            </div>
+                <input type="password" class="form-control password" id="re-password" placeholder="Password" />
+                <label for="re-password">Re-password</label>
+              </div>
                 
             </div>
         </div>
         <div class="row">
             <div class="col-12 mb-3 d-flex justify-content-center">
-                <button type="button" class="color-background text-white my-button-style">SIGN UP NOW</button>
+                <button type="button" class="color-background text-white my-button-style" onclick="createAccount(event)">SIGN UP NOW</button>
             </div>
             <div class="col-12">
                 <small class="text-body-secondary">Already register? <a href="./login.html">Sign in</a></small>
@@ -83,5 +87,8 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
