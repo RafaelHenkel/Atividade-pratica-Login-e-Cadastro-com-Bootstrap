@@ -20,8 +20,14 @@ const createAccount = async (event) => {
     console.log("conta criada", response.data);
 
     localStorage.removeItem("register");
+
+    window.location.href = "../html/login.html";
   } catch (error) {
-    console.log(error);
+    const alert = document.getElementById("my-alert");
+
+    alert.innerHTML = `<div class="alert alert-danger" role="alert">
+    Invalid credentials!
+  </div>`;
   }
 };
 
@@ -30,8 +36,6 @@ const login = async (event) => {
   try {
     const mail = document.getElementById("email").value;
     const pass = document.getElementById("password").value;
-
-    
 
     const data = {
       mail,
@@ -51,4 +55,3 @@ const login = async (event) => {
     console.log(error);
   }
 };
-
